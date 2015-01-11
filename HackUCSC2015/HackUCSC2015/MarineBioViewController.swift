@@ -99,6 +99,8 @@ class MarineBioViewController: UIViewController, UIPickerViewDelegate {
         hideWaterCol(true)
         hidePS(true)
         // Do any additional setup after loading
+		
+		WPButton.backgroundColor = UIColor.lightGrayColor()
     }
 
     override func didReceiveMemoryWarning() {
@@ -110,39 +112,60 @@ class MarineBioViewController: UIViewController, UIPickerViewDelegate {
         hidePSN(true)
         hidePS(true)
         hideWaterQ(false)
-    }
-    
-    @IBAction func WCPressed(sender: UIButton) {
-        hidePSN(true)
-        hidePS(true)
-        hideWaterQ(true)
-        hideWaterCol(false)
-    }
-    
-    @IBAction func PSNPressed(sender: UIButton) {
-        hideWaterCol(true)
-        hidePS(true)
-        hideWaterQ(true)
-        hidePSN(false)
-    }
-    @IBAction func PSPressed(sender: UIButton) {
-        hideWaterCol(true)
-        hidePSN(true)
-        hideWaterQ(true)
-        hidePS(false)
-    }
-    
-    func hidePS(sender:Bool){
-        if(sender){
-            PlankSLabel.hidden = true
-            PLANKSPEC.hidden = true
-        }else{
-            PlankSLabel.hidden = false
-            PLANKSPEC.hidden = false
+
+		WPButton.backgroundColor = UIColor.lightGrayColor()
+		WCButton.backgroundColor = UIColor.clearColor()
+		PSNButton.backgroundColor = UIColor.clearColor()
+		PSButton.backgroundColor = UIColor.clearColor()
+	}
+	
+	@IBAction func WCPressed(sender: UIButton) {
+		hidePSN(true)
+		hidePS(true)
+		hideWaterQ(true)
+		hideWaterCol(false)
+		
+		WPButton.backgroundColor = UIColor.clearColor()
+		WCButton.backgroundColor = UIColor.lightGrayColor()
+		PSNButton.backgroundColor = UIColor.clearColor()
+		PSButton.backgroundColor = UIColor.clearColor()
+	}
+	
+	@IBAction func PSNPressed(sender: UIButton) {
+		hideWaterCol(true)
+		hidePS(true)
+		hideWaterQ(true)
+		hidePSN(false)
+		
+		WPButton.backgroundColor = UIColor.clearColor()
+		WCButton.backgroundColor = UIColor.clearColor()
+		PSNButton.backgroundColor = UIColor.lightGrayColor()
+		PSButton.backgroundColor = UIColor.clearColor()
+	}
+	
+	@IBAction func PSPressed(sender: UIButton) {
+		hideWaterCol(true)
+		hidePSN(true)
+		hideWaterQ(true)
+		hidePS(false)
+		
+		WPButton.backgroundColor = UIColor.clearColor()
+		WCButton.backgroundColor = UIColor.clearColor()
+		PSNButton.backgroundColor = UIColor.clearColor()
+		PSButton.backgroundColor = UIColor.lightGrayColor()
+	}
+	
+	func hidePS(sender:Bool){
+		if(sender){
+			PlankSLabel.hidden = true
+			PLANKSPEC.hidden = true
+		}else{
+			PlankSLabel.hidden = false
+			PLANKSPEC.hidden = false
         }
-        
+		
     }
-    
+	
     func hideWaterQ(sender:Bool){
         if(sender){
             TEMP.hidden = true

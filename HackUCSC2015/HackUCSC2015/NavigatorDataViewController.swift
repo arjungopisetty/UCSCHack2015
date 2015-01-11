@@ -98,6 +98,7 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
         hideWeather(true)
         hideWind(true)
 
+		BLTabButton.backgroundColor = UIColor.lightGrayColor()
     }
     
     @IBAction func sunnyChosen(sender: UIButton) {
@@ -131,6 +132,10 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
         hideGPS(true)
         hideWeather(true)
         hideWind(false)
+		BLTabButton.backgroundColor = UIColor.clearColor()
+		WDTabButton.backgroundColor = UIColor.lightGrayColor()
+		GPSTabButton.backgroundColor = UIColor.clearColor()
+		WeTabButton.backgroundColor = UIColor.clearColor()
     }
     
     @IBAction func WePressed(sender: UIButton) {
@@ -138,6 +143,10 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
         hideWind(true)
         hideGPS(true)
         hideWeather(false)
+		BLTabButton.backgroundColor = UIColor.clearColor()
+		WDTabButton.backgroundColor = UIColor.clearColor()
+		GPSTabButton.backgroundColor = UIColor.clearColor()
+		WeTabButton.backgroundColor = UIColor.lightGrayColor()
     }
     
 
@@ -146,6 +155,10 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
         hideWind(true)
         hideWeather(true)
         hideGPS(false)
+		BLTabButton.backgroundColor = UIColor.clearColor()
+		WDTabButton.backgroundColor = UIColor.clearColor()
+		GPSTabButton.backgroundColor = UIColor.lightGrayColor()
+		WeTabButton.backgroundColor = UIColor.clearColor()
     }
     
     @IBAction func BLPressed(sender: UIButton) {
@@ -153,6 +166,10 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
         hideWind(true)
         hideWeather(true)
         hideBL(false)
+		BLTabButton.backgroundColor = UIColor.lightGrayColor()
+		WDTabButton.backgroundColor = UIColor.clearColor()
+		GPSTabButton.backgroundColor = UIColor.clearColor()
+		WeTabButton.backgroundColor = UIColor.clearColor()
     }
     
     func hideWeather(sender:Bool){
