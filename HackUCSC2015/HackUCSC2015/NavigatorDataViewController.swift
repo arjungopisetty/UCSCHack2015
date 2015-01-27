@@ -24,7 +24,7 @@ let nwind_speed = "nwind_speed"
 let ndepth = "ndepth"
 let nweather_observation = "nweather_observation"
 
-class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
+class NavigatorDataViewController: ResponsiveTextFieldViewController,UIPickerViewDelegate {
 
     @IBOutlet var StartingTime: UILabel!
     
@@ -49,7 +49,6 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
     @IBOutlet var LONGMIN: UITextField!
     @IBOutlet var LATSEC: UITextField!
     @IBOutlet var LONGSEC: UITextField!
-    @IBOutlet var GPSLabel: UILabel!
     @IBOutlet var LatLabel: UILabel!
     @IBOutlet var LongLabel: UILabel!
     @IBOutlet var D1Label: UILabel!
@@ -219,7 +218,6 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
             LONGMIN.hidden = true
             LATSEC.hidden = true
             LONGSEC.hidden = true
-            GPSLabel.hidden = true
             LatLabel.hidden = true
             LongLabel.hidden = true
             D1Label.hidden = true
@@ -235,7 +233,6 @@ class NavigatorDataViewController: UIViewController,UIPickerViewDelegate {
             LONGMIN.hidden = false
             LATSEC.hidden = false
             LONGSEC.hidden = false
-            GPSLabel.hidden = false
             LatLabel.hidden = false
             LongLabel.hidden = false
             D1Label.hidden = false
